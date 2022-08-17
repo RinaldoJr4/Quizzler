@@ -24,7 +24,6 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         updateQuestion()
-        secondButton.titleLabel?.text = "iosdjkaiosd"
     }
 
     @IBAction func answerButtonPressed(_ sender: UIButton) {
@@ -58,9 +57,9 @@ class ViewController: UIViewController {
         firstButton.backgroundColor = UIColor.clear     // mexe nos botões
         secondButton.backgroundColor = UIColor.clear
         thirdButton.backgroundColor = UIColor.clear
-        firstButton.titleLabel?.text = quizBrain.getAnswers(button: 0)
-        secondButton.titleLabel?.text = quizBrain.getAnswers(button: 1)
-        thirdButton.titleLabel?.text = quizBrain.getAnswers(button: 2)
+        firstButton.setTitle(quizBrain.getAnswers(button: 0), for: .normal)
+        secondButton.setTitle(quizBrain.getAnswers(button: 1), for: .normal)
+        thirdButton.setTitle(quizBrain.getAnswers(button: 2), for: .normal)
         
 //        progressBar.progress = Float(questionNumber)/Float(quiz.count-1)
         
